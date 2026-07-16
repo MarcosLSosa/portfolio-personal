@@ -255,25 +255,26 @@
   <p class="section-desc reveal">Estoy disponible para proyectos freelance, posiciones a tiempo completo y colaboraciones de código abierto.</p>
 
   <div class="contact-wrapper reveal">
-    <div class="contact-grid">
+    <form id="contact-form" class="contact-grid" onsubmit="return handleSend(event)">
       <div>
-        <label>// nombre</label>
-        <input type="text" placeholder="Tu nombre">
+        <label for="contact-name">// nombre</label>
+        <input id="contact-name" name="name" type="text" placeholder="Tu nombre">
       </div>
       <div>
-        <label>// correo</label>
-        <input type="email" placeholder="correo@ejemplo.com" value="marcoslucianososa@gmail.com">
+        <label for="contact-email">// correo</label>
+        <input id="contact-email" name="email" type="email" placeholder="correo@ejemplo.com" value="marcoslucianososa@gmail.com">
       </div>
       <div class="full">
-        <label>// asunto</label>
-        <input type="text" placeholder="¿En qué puedo ayudarte?">
+        <label for="contact-subject">// asunto</label>
+        <input id="contact-subject" name="subject" type="text" placeholder="¿En qué puedo ayudarte?">
       </div>
       <div class="full">
-        <label>// mensaje</label>
-        <textarea placeholder="Cuéntame sobre tu proyecto..."></textarea>
+        <label for="contact-message">// mensaje</label>
+        <textarea id="contact-message" name="message" placeholder="Cuéntame sobre tu proyecto..."></textarea>
       </div>
-    </div>
-    <button class="send-btn" onclick="handleSend(this)">Enviar Mensaje →</button>
+      <button class="send-btn" type="submit">Enviar Mensaje →</button>
+      <p class="contact-note">El mensaje se abre en tu cliente de correo y se envía a <strong>marcoslucianososa@gmail.com</strong>.</p>
+    </form>
 
     <div class="social-row">
       <a href="https://github.com/MarcosLSosa" class="social-btn">

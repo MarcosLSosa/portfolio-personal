@@ -106,11 +106,33 @@ navLinks.forEach(link => {
 });
 
 // ── SEND BUTTON ──
-function handleSend(btn) {
-  btn.textContent = '✓ Mensaje enviado';
+function handleSend(event) {
+  event.preventDefault();
+  const form = document.getElementById('contact-form');
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const subject = form.subject.value.trim();
+  const message = form.message.value.trim();
+
+  if (!name || !email || !subject || !message) {
+    alert('Por favor completa todos los campos antes de enviar el mensaje.');
+    return false;
+  }
+
+  const mailto = `mailto:marcoslucianososa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    `Nombre: ${name}\nEmail: ${email}\n\n${message}`
+  )}`;
+
+  window.location.href = mailto;
+
+  const btn = form.querySelector('.send-btn');
+  btn.textContent = '✓ Mensaje listo';
   btn.style.background = 'linear-gradient(135deg, #00ff88, #00b4ff)';
+
   setTimeout(() => {
     btn.textContent = 'Enviar Mensaje →';
     btn.style.background = '';
   }, 3000);
+
+  return false;
 }
