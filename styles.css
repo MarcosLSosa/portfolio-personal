@@ -1,21 +1,21 @@
 :root {
-  --bg-deep: #070b1c;
-  --bg-card: #121c34;
-  --bg-surface: #161f35;
-  --primary: #88c6ff;
-  --accent: #c293ff;
-  --accent-soft: #7ab7ff;
-  --electric: #00b4ff;
-  --violet: #8b5cf6;
-  --violet-light: #c084fc;
-  --green: #62e0c7;
-  --slate: #a0b4d1;
-  --success: #62e0c7;
-  --text: #e1e7ff;
-  --text-bright: #ffffff;
-  --muted: #92a7c2;
-  --border: rgba(136,198,255,0.16);
-  --glow: 0 0 40px rgba(136,198,255,0.14);
+  --bg-deep: #040812;
+  --bg-card: #0f172a;
+  --bg-surface: #111827;
+  --primary: #60a5fa;
+  --accent: #8b5cf6;
+  --accent-soft: #818cf8;
+  --electric: #38bdf8;
+  --violet: #a78bfa;
+  --violet-light: #c4b5fd;
+  --green: #34d399;
+  --slate: #94a3b8;
+  --success: #34d399;
+  --text: #e2e8f0;
+  --text-bright: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(56,189,248,0.16);
+  --glow: 0 0 40px rgba(56,189,248,0.14);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,9 +38,9 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 2.5rem;
-  background: rgba(6,11,23,0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(15,23,42,0.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(100,116,139,0.14);
   transition: background 0.3s;
 }
 .logo {
@@ -167,19 +167,26 @@ section { position: relative; z-index: 1; }
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2.8rem, 8vw, 5.5rem);
   font-weight: 700; line-height: 1.1;
-  color: var(--text-bright); margin-bottom: 1.5rem;
+  color: var(--text-bright); margin-bottom: 1.25rem;
 }
 .hero-title .gradient {
   background: linear-gradient(90deg, var(--primary), var(--accent-soft));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
+}
+.hero-role {
+  color: var(--accent-soft);
+  font-size: 1.05rem;
+  margin: 0 auto 1.5rem;
+  max-width: 720px;
 }
 .hero-subtitle {
   font-size: 1.05rem; color: var(--muted);
-  max-width: 540px; margin: 0 auto 2.5rem;
+  max-width: 720px; margin: 0 auto 2.5rem;
 }
 .hero-subtitle .tech { color: var(--electric); font-weight: 500; }
-.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 5rem; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem; }
 .btn-primary {
   padding: .85rem 2rem; border-radius: 10px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -201,13 +208,22 @@ section { position: relative; z-index: 1; }
   transform: translateY(-2px);
 }
 .hero-stats {
-  display: flex; gap: 3.5rem; justify-content: center;
-  flex-wrap: wrap;
+  display: flex; gap: 1.5rem; justify-content: center;
+  flex-wrap: wrap; margin-top: 2rem;
 }
-.stat { text-align: center; }
+.stat {
+  text-align: center;
+  min-width: 150px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(96,165,250,0.16);
+  background: rgba(15,23,42,0.75);
+  box-shadow: 0 24px 60px rgba(15,23,42,0.25);
+}
 .stat-num {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem; font-weight: 700;
+  font-size: 2.4rem; font-weight: 700;
+  color: transparent;
   background: linear-gradient(135deg, var(--electric), var(--violet-light));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -216,6 +232,7 @@ section { position: relative; z-index: 1; }
   font-size: .78rem; color: var(--slate);
   text-transform: uppercase; letter-spacing: .08em;
   font-family: 'JetBrains Mono', monospace;
+  margin-top: .65rem;
 }
 
 /* ── SCROLL INDICATOR ── */
@@ -534,6 +551,10 @@ textarea { resize: vertical; min-height: 120px; }
   font-size: .85rem; font-weight: 500;
   transition: border-color .2s, color .2s, transform .2s;
   background: rgba(255,255,255,0.02);
+}
+.social-btn img.social-icon {
+  width: 18px; height: 18px;
+  display: inline-block;
 }
 .social-btn:hover { border-color: var(--electric); color: var(--electric); transform: translateY(-2px); }
 
