@@ -18,21 +18,24 @@
     Marcos Sosa
   </a>
 
-  <button class="nav-toggle" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
   <ul class="nav-links">
     <li><a href="#inicio" class="active">Inicio</a></li>
     <li><a href="#sobre-mi">Sobre Mí</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
     <li><a href="#experiencia">Experiencia</a></li>
-    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
-    <li><a href="Marcos_Luciano_Sosa_CV.pdf" class="nav-cta" download>Descargar CV</a></li>
   </ul>
+
+  <div class="nav-actions">
+    <a href="#contacto" class="nav-cta">Contacto</a>
+    <a href="Marcos_Luciano_Sosa_CV.pdf" class="nav-cv btn-secondary" download>Descargar CV</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -84,23 +87,21 @@
 <p class="section-desc reveal">Profesional de Infraestructura y DevOps enfocado en automatización, virtualización y administración de plataformas críticas.</p>
   <div class="about-grid">
     <div class="about-visual reveal">
-      <div class="code-block">
-        <div class="cb-header">
-          <div class="dot dot-r"></div>
-          <div class="dot dot-y"></div>
-          <div class="dot dot-g"></div>
-<div class="ln"><span class="ln-num">1</span><span><span class="kw">const</span> <span class="fn">engineer</span> = {</span></div>
-<div class="ln"><span class="ln-num">2</span><span>  <span class="prop">name</span>: <span class="str">"Marcos Luciano Sosa"</span>,</span></div>
-<div class="ln"><span class="ln-num">3</span><span>  <span class="prop">role</span>: <span class="str">"Infrastructure & DevOps Engineer"</span>,</span></div>
-<div class="ln"><span class="ln-num">4</span><span>  <span class="prop">location</span>: <span class="str">"San Luis, Argentina 🇦🇷"</span>,</span></div>
-<div class="ln"><span class="ln-num">5</span><span>  <span class="prop">habilidades</span>: [</span></div>
-<div class="ln"><span class="ln-num">6</span><span>    <span class="str">"Linux"</span>, <span class="str">"Docker"</span>,</span></div>
-<div class="ln"><span class="ln-num">7</span><span>    <span class="str">"Ansible"</span>, <span class="str">"Proxmox"</span></span></div>
-<div class="ln"><span class="ln-num">8</span><span>  ],</span></div>
-<div class="ln"><span class="ln-num">9</span><span>  <span class="prop">disponible</span>: <span class="kw">true</span>,</span></div>
-<div class="ln"><span class="ln-num">10</span><span>  <span class="fn">automatizacion</span>: () => <span class="str">"Siempre"</span></span></div>
-<div class="ln"><span class="ln-num">11</span><span>};</span></div>
-<div class="ln"><span class="ln-num">12</span><span class="cmt">// automatizando infraestructura</span></div>
+      <div class="profile-card">
+        <div class="profile-card-head">
+          <div class="profile-chip">IT</div>
+          <div>
+            <p class="profile-label">Experiencia clave</p>
+            <h3>Infraestructura estratégica</h3>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div><strong>17+</strong><span>Años en IT</span></div>
+          <div><strong>10+</strong><span>Virtualización</span></div>
+          <div><strong>5+</strong><span>Automatización</span></div>
+        </div>
+        <p class="profile-note">Construyo soluciones confiables y operables con Linux, Proxmox, Docker, Ansible y servicios cloud.</p>
+      </div>
     </div>
 
     <div class="about-content reveal">
@@ -200,69 +201,49 @@
   <p class="section-label reveal">// experiencia</p>
   <div class="divider reveal"></div>
   <h2 class="section-title reveal">Experiencia Profesional</h2>
-  <p class="section-desc reveal">Mi recorrido profesional en infraestructura, formación y administración tecnológica.</p>
-  <div class="timeline">
-    <div class="tl-item reveal">
-      <div class="tl-dot">☁️</div>
-      <div class="tl-content">
-        <div class="tl-date">Marzo 2026 – Actualidad</div>
-        <h4>Cloud & Infrastructure Administrator</h4>
-        <div class="tl-company">GRUPO SLOTS</div>
-        <p>Responsable de la administración, evolución y seguridad de la infraestructura tecnológica corporativa.</p>
-        <p>Principales responsabilidades:</p>
-        <ul>
-          <li>Administración integral de Microsoft 365 y Exchange Online.</li>
-          <li>Gestión de identidades, accesos y licenciamiento.</li>
-          <li>Administración de entornos híbridos (Cloud + On-Premise).</li>
-          <li>Migración de plataformas Zimbra hacia Microsoft 365.</li>
-          <li>Administración de servidores Linux y servicios Open Source.</li>
-          <li>Administración de infraestructura virtualizada mediante Proxmox VE.</li>
-          <li>Implementación de políticas de backup y continuidad operativa.</li>
-          <li>Monitoreo y optimización de servicios críticos.</li>
-        </ul>
+  <p class="section-desc reveal">Más de 17 años construyendo infraestructura estable, automatizada y preparada para el crecimiento.</p>
+
+  <div class="experience-grid">
+    <article class="exp-card reveal">
+      <div class="exp-card-head">
+        <span class="exp-badge">☁️</span>
+        <div>
+          <div class="tl-date">Marzo 2026 – Actualidad</div>
+          <h4>Cloud & Infrastructure Administrator</h4>
+          <div class="tl-company">GRUPO SLOTS</div>
+        </div>
       </div>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot">🎓</div>
-      <div class="tl-content">
-        <div class="tl-date">Agosto 2022 – Actualidad</div>
-        <h4>Instructor Senior | Technology Trainer | Consultor en Formación Tecnológica</h4>
-        <div class="tl-company">ISTEA | EDUCACIÓN IT</div>
-        <p>Formación de estudiantes y profesionales IT en carreras de nivel superior y programas de capacitación tecnológica orientados al mercado laboral.</p>
-        <p>Materias dictadas:</p>
-        <ul>
-          <li>Tecnicatura Superior en Soporte e Infraestructura: Sistemas Operativos I, Sistemas Operativos II.</li>
-          <li>Tecnicatura Superior en Desarrollo de Software: Ingeniería de Software, Sistemas de Información.</li>
-        </ul>
-        <p>Contenidos relacionados con:</p>
-        <ul>
-          <li>Administración Linux y Windows.</li>
-          <li>Infraestructura Empresarial.</li>
-          <li>Virtualización.</li>
-          <li>Redes y Servicios Corporativos.</li>
-          <li>Metodologías de Desarrollo.</li>
-          <li>Relevamiento de Requerimientos.</li>
-          <li>Análisis Funcional.</li>
-          <li>Gestión de Proyectos.</li>
-          <li>Diseño de Sistemas.</li>
-        </ul>
-        <p>Cursos dictados:</p>
-        <ul>
-          <li>Análisis y Diseño con SQL Server 2022.</li>
-          <li>Análisis Funcional.</li>
-          <li>Administrador Avanzado Hosting Linux.</li>
-          <li>Inteligencia Artificial y Productividad.</li>
-          <li>CCNA3 Redes Empresariales, Seguridad y Automatización V7.2.</li>
-        </ul>
-        <p>Principales contribuciones:</p>
-        <ul>
-          <li>Diseño de material académico y laboratorios técnicos.</li>
-          <li>Desarrollo de contenidos alineados con necesidades del mercado IT.</li>
-          <li>Formación en infraestructura, bases de datos, software, networking y automatización.</li>
-          <li>Aplicación de Inteligencia Artificial para mejorar productividad y procesos.</li>
-        </ul>
+      <p>Diseño y administro la infraestructura tecnológica con foco en disponibilidad, seguridad y continuidad operativa en entornos híbridos.</p>
+      <ul>
+        <li>Administración integral de Microsoft 365 y Exchange Online.</li>
+        <li>Gestión de identidades, accesos y licenciamiento.</li>
+        <li>Administración de entornos híbridos (Cloud + On-Premise).</li>
+        <li>Migración de plataformas Zimbra hacia Microsoft 365.</li>
+        <li>Administración de servidores Linux y servicios Open Source.</li>
+        <li>Administración de infraestructura virtualizada mediante Proxmox VE.</li>
+        <li>Implementación de políticas de backup y continuidad operativa.</li>
+        <li>Monitoreo y optimización de servicios críticos.</li>
+      </ul>
+    </article>
+
+    <article class="exp-card reveal">
+      <div class="exp-card-head">
+        <span class="exp-badge">🎓</span>
+        <div>
+          <div class="tl-date">Agosto 2022 – Actualidad</div>
+          <h4>Instructor Senior | Technology Trainer | Consultor en Formación Tecnológica</h4>
+          <div class="tl-company">ISTEA | EDUCACIÓN IT</div>
+        </div>
       </div>
-    </div>
+      <p>Formación y consultoría para estudiantes y profesionales IT, combinando práctica de campo con contenidos vigentes del mercado.</p>
+      <ul>
+        <li>Docencia en Tecnología, Redes, Sistemas y Desarrollo de Software.</li>
+        <li>Elaboración de materiales y laboratorios técnicos orientados a empleabilidad.</li>
+        <li>Capacitación en infraestructura, bases de datos, networking y automatización.</li>
+        <li>Implementación de metodologías ágiles en cursos y talleres.</li>
+        <li>Aplicación de IA para mejorar productividad en aprendizaje y procesos.</li>
+      </ul>
+    </article>
   </div>
 </section>
 
