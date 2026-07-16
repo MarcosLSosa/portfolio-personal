@@ -106,33 +106,41 @@ navLinks.forEach(link => {
 });
 
 // ── SEND BUTTON ──
-function handleSend(event) {
+async function handleSend(event) {
   event.preventDefault();
   const form = document.getElementById('contact-form');
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const subject = form.subject.value.trim();
-  const message = form.message.value.trim();
+  const note = document.getElementById('contact-note');
+  const btn = form.querySelector('.send-btn');
 
-  if (!name || !email || !subject || !message) {
-    alert('Por favor completa todos los campos antes de enviar el mensaje.');
-    return false;
+  const formData = new FormData(form);
+  const honey = formData.get('_honey');
+  if (honey) {
+    return false; // spam trap
   }
 
-  const mailto = `mailto:marcoslucianososa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-    `Nombre: ${name}\nEmail: ${email}\n\n${message}`
-  )}`;
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
 
-  window.location.href = mailto;
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    });
 
-  const btn = form.querySelector('.send-btn');
-  btn.textContent = '✓ Mensaje listo';
-  btn.style.background = 'linear-gradient(135deg, #00ff88, #00b4ff)';
+    if (!response.ok) throw new Error('Error al enviar el mensaje.');
+    const result = await response.json();
+    if (!result.success) throw new Error('No se pudo completar el envío.');
 
-  setTimeout(() => {
+    note.textContent = 'Mensaje enviado correctamente. Te responderé pronto en breve.';
+    note.classList.add('success');
+    form.reset();
+  } catch (error) {
+    note.textContent = 'Ocurrió un error. Intenta de nuevo o envía un correo directamente a marcoslucianososa@gmail.com.';
+    note.classList.add('error');
+  } finally {
+    btn.disabled = false;
     btn.textContent = 'Enviar Mensaje →';
-    btn.style.background = '';
-  }, 3000);
+  }
 
   return false;
 }

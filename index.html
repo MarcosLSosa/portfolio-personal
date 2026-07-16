@@ -255,25 +255,27 @@
   <p class="section-desc reveal">Estoy disponible para proyectos freelance, posiciones a tiempo completo y colaboraciones de código abierto.</p>
 
   <div class="contact-wrapper reveal">
-    <form id="contact-form" class="contact-grid" onsubmit="return handleSend(event)">
+    <form id="contact-form" class="contact-grid" action="https://formsubmit.co/ajax/marcoslucianososa@gmail.com" method="POST" onsubmit="return handleSend(event)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_honey" style="display:none">
       <div>
         <label for="contact-name">// nombre</label>
-        <input id="contact-name" name="name" type="text" placeholder="Tu nombre">
+        <input id="contact-name" name="name" type="text" placeholder="Tu nombre" required>
       </div>
       <div>
         <label for="contact-email">// correo</label>
-        <input id="contact-email" name="email" type="email" placeholder="correo@ejemplo.com" value="marcoslucianososa@gmail.com">
+        <input id="contact-email" name="email" type="email" placeholder="correo@ejemplo.com" value="marcoslucianososa@gmail.com" required>
       </div>
       <div class="full">
         <label for="contact-subject">// asunto</label>
-        <input id="contact-subject" name="subject" type="text" placeholder="¿En qué puedo ayudarte?">
+        <input id="contact-subject" name="subject" type="text" placeholder="¿En qué puedo ayudarte?" required>
       </div>
       <div class="full">
         <label for="contact-message">// mensaje</label>
-        <textarea id="contact-message" name="message" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+        <textarea id="contact-message" name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
       </div>
       <button class="send-btn" type="submit">Enviar Mensaje →</button>
-      <p class="contact-note">El mensaje se abre en tu cliente de correo y se envía a <strong>marcoslucianososa@gmail.com</strong>.</p>
+      <p class="contact-note" id="contact-note">El mensaje se enviará directamente a <strong>marcoslucianososa@gmail.com</strong>.</p>
     </form>
 
     <div class="social-row">
