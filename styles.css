@@ -789,11 +789,12 @@ footer span { color: var(--electric); }
   }
   .nav-links.open {
     opacity: 1;
-    max-height: 480px;
+    max-height: 520px;
     pointer-events: auto;
     transform: translateY(0);
   }
   .nav-links li { width: 100%; }
+  .nav-mobile-action { display: block; }
   .nav-links a {
     width: 100%;
     display: block;
@@ -814,6 +815,7 @@ footer span { color: var(--electric); }
     width: calc(50% - .75rem);
     min-width: 140px;
   }
+  .nav-mobile-action { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-wrapper { padding: 2rem 1.5rem; }
