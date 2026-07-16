@@ -44,7 +44,11 @@ function animateParticles() {
 animateParticles();
 
 // ── TYPEWRITER ──
-const names = ['Alex Dev', 'Full Stack Dev', 'Problem Solver'];
+const names = [
+  'Marcos Sosa',
+  'Infrastructure & DevOps',
+  'Proxmox • Docker • Ansible'
+];
 let ni = 0, ci = 0, deleting = false;
 const typedEl = document.getElementById('typed-name');
 
@@ -78,6 +82,9 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // ── NAV ACTIVE ──
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-links');
+
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(s => {
@@ -85,6 +92,16 @@ window.addEventListener('scroll', () => {
   });
   navLinks.forEach(a => {
     a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
   });
 });
 

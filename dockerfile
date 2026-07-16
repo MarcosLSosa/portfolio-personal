@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-LABEL maintainer="Alex Dev <alex-dev@email.com>"
+LABEL maintainer="Marcos L. Sosa <marcosluianososa@email.com>"
 
 COPY index.html  /usr/share/nginx/html/index.html
 COPY styles.css  /usr/share/nginx/html/styles.css

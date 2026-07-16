@@ -52,6 +52,25 @@ nav {
   font-family: 'JetBrains Mono', monospace; font-size: .75rem; font-weight: 500;
   color: white;
 }
+.nav-toggle {
+  display: none;
+  width: 42px; height: 42px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  cursor: pointer;
+  padding: .5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 18px; height: 2px;
+  background: var(--text);
+  border-radius: 999px;
+}
 .nav-links { display: flex; gap: .25rem; list-style: none; }
 .nav-links a {
   color: var(--slate); text-decoration: none;
@@ -67,6 +86,18 @@ nav {
   background: linear-gradient(135deg, var(--electric), var(--violet)) !important;
   color: white !important;
   border-radius: 8px !important;
+}
+.btn-secondary {
+  padding: .85rem 2rem; border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: var(--text-bright); font-weight: 600; font-size: .95rem;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.12); cursor: pointer;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(0,180,255,0.3);
+  transform: translateY(-2px);
 }
 
 /* ── SECTIONS ── */
@@ -275,6 +306,38 @@ section { position: relative; z-index: 1; }
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* ── SERVICIOS ── */
+#servicios { padding: 7rem 2rem; }
+.services-grid {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;
+}
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px; padding: 1.8rem;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--glow);
+  border-color: rgba(124,58,237,0.3);
+}
+.service-icon {
+  width: 50px; height: 50px;
+  display: grid; place-items: center;
+  border-radius: 14px;
+  background: rgba(0,180,255,0.12);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--text-bright); margin-bottom: .7rem;
+}
+.service-card p { color: var(--slate); font-size: .94rem; line-height: 1.7; }
+
 /* ── HABILIDADES ── */
 #habilidades { padding: 7rem 2rem; background: linear-gradient(180deg, transparent, rgba(13,21,37,0.6), transparent); }
 .skills-grid {
@@ -481,7 +544,34 @@ footer span { color: var(--electric); }
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 1rem 1.25rem; }
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    right: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 1rem 1rem 1.2rem;
+    background: rgba(6,11,23,0.96);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-links a {
+    padding: .85rem 1rem;
+    border-radius: 12px;
+  }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-wrapper { padding: 2rem 1.5rem; }

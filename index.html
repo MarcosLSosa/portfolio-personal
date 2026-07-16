@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Dev · Portfolio</title>
+  <title>Marcos Luciano Sosa · Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,15 +15,24 @@
 <nav id="navbar">
   <a href="#inicio" class="logo">
     <div class="logo-icon">&lt;/&gt;</div>
-    DevPortfolio
+    Marcos Sosa
   </a>
+
+  <button class="nav-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
   <ul class="nav-links">
     <li><a href="#inicio" class="active">Inicio</a></li>
     <li><a href="#sobre-mi">Sobre Mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#experiencia">Experiencia</a></li>
     <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    <li><a href="Marcos_Luciano_Sosa_CV.pdf" class="nav-cta" download>Descargar CV</a></li>
   </ul>
 </nav>
 
@@ -40,36 +49,31 @@
     Hola, soy <span class="gradient" id="typed-name"></span>
   </h1>
 
-  <p class="hero-subtitle">
-    Apasionado/a por crear soluciones digitales modernas. Trabajo con
-    <span class="tech">React</span>, <span class="tech">Node.js</span>,
-    <span class="tech">Docker</span> y más. Siempre aprendiendo y construyendo cosas nuevas 🚀
-  </p>
+<p class="hero-subtitle">
+  Diseño y entrego soluciones de infraestructura, automatización y servicios cloud para empresas que buscan estabilidad, eficiencia y crecimiento.
+</p>
 
   <div class="hero-btns">
     <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
-    <a href="#contacto" class="btn-ghost">Contactarme</a>
+    <a href="Marcos_Luciano_Sosa_CV.pdf" class="btn-secondary" download>Descargar CV</a>
   </div>
 
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-num">3+</div>
-      <div class="stat-lbl">Proyectos</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">Git</div>
-      <div class="stat-lbl">Control de Versiones</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">Docker</div>
-      <div class="stat-lbl">Contenedores</div>
-    </div>
+<div class="hero-stats">
+  <div class="stat">
+    <div class="stat-num">10+</div>
+    <div class="stat-lbl">Años IT</div>
   </div>
 
-  <div class="scroll-hint">
-    <span>scroll</span>
-    <span class="scroll-arrow">↓</span>
+  <div class="stat">
+    <div class="stat-num">Ansible</div>
+    <div class="stat-lbl">Automatización</div>
   </div>
+
+  <div class="stat">
+    <div class="stat-num">Proxmox</div>
+    <div class="stat-lbl">Virtualización</div>
+  </div>
+</div>
 </section>
 
 <!-- SOBRE MÍ -->
@@ -77,8 +81,7 @@
   <p class="section-label reveal">// about me</p>
   <div class="divider reveal"></div>
   <h2 class="section-title reveal">Sobre Mí</h2>
-  <p class="section-desc reveal">Desarrollador/a full-stack con pasión por el código limpio y las experiencias de usuario excepcionales.</p>
-
+<p class="section-desc reveal">Profesional de Infraestructura y DevOps enfocado en automatización, virtualización y administración de plataformas críticas.</p>
   <div class="about-grid">
     <div class="about-visual reveal">
       <div class="code-block">
@@ -86,39 +89,68 @@
           <div class="dot dot-r"></div>
           <div class="dot dot-y"></div>
           <div class="dot dot-g"></div>
-          <span class="cb-filename">developer.ts</span>
-        </div>
-        <div class="ln"><span class="ln-num">1</span><span><span class="kw">const</span> <span class="fn">developer</span> = {</span></div>
-        <div class="ln"><span class="ln-num">2</span><span>  <span class="prop">name</span>: <span class="str">"Alex Dev"</span>,</span></div>
-        <div class="ln"><span class="ln-num">3</span><span>  <span class="prop">role</span>: <span class="str">"Full Stack Dev"</span>,</span></div>
-        <div class="ln"><span class="ln-num">4</span><span>  <span class="prop">location</span>: <span class="str">"Argentina 🇦🇷"</span>,</span></div>
-        <div class="ln"><span class="ln-num">5</span><span>  <span class="prop">skills</span>: [</span></div>
-        <div class="ln"><span class="ln-num">6</span><span>    <span class="str">"React"</span>, <span class="str">"Node.js"</span>,</span></div>
-        <div class="ln"><span class="ln-num">7</span><span>    <span class="str">"Docker"</span>, <span class="str">"TypeScript"</span></span></div>
-        <div class="ln"><span class="ln-num">8</span><span>  ],</span></div>
-        <div class="ln"><span class="ln-num">9</span><span>  <span class="prop">available</span>: <span class="kw">true</span>,</span></div>
-        <div class="ln"><span class="ln-num">10</span><span>  <span class="fn">coffee</span>: () => <span class="str">"☕ siempre"</span></span></div>
-        <div class="ln"><span class="ln-num">11</span><span>};</span></div>
-        <div class="ln"><span class="ln-num">12</span><span class="cmt">// listo para el próximo reto</span></div>
-      </div>
+<div class="ln"><span class="ln-num">1</span><span><span class="kw">const</span> <span class="fn">engineer</span> = {</span></div>
+<div class="ln"><span class="ln-num">2</span><span>  <span class="prop">name</span>: <span class="str">"Marcos Luciano Sosa"</span>,</span></div>
+<div class="ln"><span class="ln-num">3</span><span>  <span class="prop">role</span>: <span class="str">"Infrastructure & DevOps Engineer"</span>,</span></div>
+<div class="ln"><span class="ln-num">4</span><span>  <span class="prop">location</span>: <span class="str">"San Luis, Argentina 🇦🇷"</span>,</span></div>
+<div class="ln"><span class="ln-num">5</span><span>  <span class="prop">skills</span>: [</span></div>
+<div class="ln"><span class="ln-num">6</span><span>    <span class="str">"Linux"</span>, <span class="str">"Docker"</span>,</span></div>
+<div class="ln"><span class="ln-num">7</span><span>    <span class="str">"Ansible"</span>, <span class="str">"Proxmox"</span></span></div>
+<div class="ln"><span class="ln-num">8</span><span>  ],</span></div>
+<div class="ln"><span class="ln-num">9</span><span>  <span class="prop">available</span>: <span class="kw">true</span>,</span></div>
+<div class="ln"><span class="ln-num">10</span><span>  <span class="fn">automation</span>: () => <span class="str">"Siempre"</span></span></div>
+<div class="ln"><span class="ln-num">11</span><span>};</span></div>
+<div class="ln"><span class="ln-num">12</span><span class="cmt">// automatizando infraestructura</span></div>
     </div>
 
     <div class="about-content reveal">
       <h3>¿Quién soy?</h3>
-      <p>Soy un/a desarrollador/a full-stack apasionado/a por transformar ideas en productos digitales reales. Me encanta cada etapa del proceso: desde el diseño de arquitecturas hasta el despliegue en producción.</p>
-      <p>Trabajo con metodologías ágiles, valoro el código limpio y estoy siempre en busca de nuevas tecnologías que me permitan construir mejores soluciones.</p>
-      <p>Fuera del código, disfruto del open source, los hackathons y compartir conocimiento con la comunidad tech.</p>
-      <div class="about-tags">
-        <span class="tag">React</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Git</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">MongoDB</span>
-        <span class="tag">Linux</span>
-      </div>
+      <p>
+Soy profesional de infraestructura con experiencia en administración de servidores Linux, virtualización, automatización de procesos y soporte de plataformas empresariales.
+</p>
+<p>
+Trabajo diariamente con Proxmox, Docker, GitLab, Ansible y tecnologías de networking para garantizar entornos estables, seguros y escalables.
+</p>
+<p>
+Me apasiona la automatización, la optimización de procesos y la implementación de soluciones que simplifiquen la operación de infraestructura.
+</p>
+     <div class="about-tags">
+  <span class="tag">Linux</span>
+  <span class="tag">Docker</span>
+  <span class="tag">Ansible</span>
+  <span class="tag">GitLab</span>
+  <span class="tag">Proxmox</span>
+  <span class="tag">Networking</span>
+  <span class="tag">ZFS</span>
+  <span class="tag">Monitoring</span>
+</div>
     </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <p class="section-label reveal">// servicios</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Qué ofrezco</h2>
+  <p class="section-desc reveal">Servicios pensados para llevar tu infraestructura y equipos al siguiente nivel con automatización, seguridad y disponibilidad.</p>
+
+  <div class="services-grid">
+    <article class="service-card reveal">
+      <div class="service-icon">⚙️</div>
+      <h3>Automatización</h3>
+      <p>Implemento playbooks y pipelines que reducen tareas repetitivas y aceleran despliegues con Ansible y CI/CD.</p>
+    </article>
+    <article class="service-card reveal">
+      <div class="service-icon">🐳</div>
+      <h3>Contenedores</h3>
+      <p>Construyo y despliego aplicaciones seguras en contenedores Docker, orquestadas y listas para producción.</p>
+    </article>
+    <article class="service-card reveal">
+      <div class="service-icon">🛡️</div>
+      <h3>Infraestructura</h3>
+      <p>Diseño entornos virtualizados con Proxmox, almacenamiento ZFS y monitoreo para alta disponibilidad.</p>
+    </article>
   </div>
 </section>
 
@@ -192,8 +224,10 @@
     <div class="project-card reveal">
       <div class="project-thumb p1-bg">🛒</div>
       <div class="project-body">
-        <h3>E-Commerce Platform</h3>
-        <p>Plataforma de comercio electrónico full-stack con carrito, pagos y panel de administración en tiempo real.</p>
+<h3>Infraestructura Virtualizada</h3>
+<p>
+Implementación y administración de plataformas Proxmox VE utilizando almacenamiento ZFS, backups automatizados y alta disponibilidad.
+</p>
         <div class="proj-tags">
           <span class="proj-tag">React</span>
           <span class="proj-tag">Node.js</span>
@@ -313,7 +347,7 @@
 
     <div class="social-row">
       <a href="#" class="social-btn">🐙 GitHub</a>
-      <a href="#" class="social-btn">💼 LinkedIn</a>
+      <a href="https://www.linkedin.com/in/marcos-luciano-sosa-7676b6133/" class="social-btn">💼 LinkedIn</a>
       <a href="#" class="social-btn">🐦 Twitter</a>
       <a href="#" class="social-btn">📧 Email</a>
     </div>
@@ -322,7 +356,7 @@
 
 <!-- FOOTER -->
 <footer>
-  Hecho con <span>♥</span> y <span>☕</span> · Alex Dev &copy; 2025 · <span>Buenos Aires, AR</span>
+  Hecho con <span>♥</span> y <span>☕</span> · Marcos Sosa &copy; 2026 · <span>Villa Mercedes, San Luis. AR</span>
 </footer>
 
 <script src="script.js"></script>
